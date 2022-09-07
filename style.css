@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -7,8 +9,7 @@ body {
 }
 
 header {
-  /* background-color: #1d2126; */
-  height: 80px;
+  background-color: #1d2126;
 }
 
 .container {
@@ -16,18 +17,105 @@ header {
   margin: 0 auto;
 }
 
-.row {
+.row-header {
   display: flex;
-  flex-flow: row nowrap;
+  height: 80px;
   padding: 0 -15px;
+  align-items: center;
+  /* justify-content: center; */
 }
 
-
+[class*="col-"] {
+  padding: 0 15px;
+}
 
 .col-3 {
   width: 25%;
 }
 
-.col-6 {
-  width: 50%;
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.logo {
+  height: 20px;
+}
+
+.navigation ul {
+  display: flex;
+  padding: 0;
+  /* justify-content: space-around; */
+}
+
+.navigation li {
+  border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 5px 10px;
+  list-style: none;
+  color: #a4aead;
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 400;
+  border: 2px solid #1d2126;
+
+}
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+}
+
+.navigation li:active {
+  border: 2px solid #23b7a4 !important;
+  color: #23b7a4;
+}
+
+.navigation li:hover {
+  border: 2px solid #585d64;
+  cursor: pointer;
+}
+
+#search-border {
+  border: 1px solid #585d64;
+}
+
+.search {
+  height: 30px;
+  display: flex;
+}
+
+.search>input {
+  display: inline-block;
+  padding: 5px 0px;
+  outline: none;
+  border: none;
+  background: none;
+  vertical-align: text-bottom;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 400;
+  color: #a4aead;
+  max-width: 135px;
+  text-transform: uppercase;
+}
+
+.search>input::placeholder {
+  color: #a4aead;
+  text-transform: uppercase;
+}
+
+.search button {
+  position: relative;
+  background-color: #1d2126;
+  background-image: url(images/icon-search-white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  border: none;
 }
