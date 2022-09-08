@@ -1,5 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap');
 
+@media (min-width: 880px) and (max-width: 1170px) {
+  .row-header {
+    flex-wrap: wrap;
+  }
+
+  .col-3 {
+    flex: 100%;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 879px) {
+  .row-header {
+    flex-wrap: wrap;
+  }
+
+  .col-3 {
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  .col-2 {
+    margin-right: auto;
+  }
+
+  .col-7 {
+    order: 3;
+    display: flex;
+  }
+
+  .navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navigation {
+    overflow-x: auto;
+    align-items: flex-start;
+  }
+
+  .navigation ul {
+    max-width: 400px;
+    margin: 0;
+  }
+
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -20,9 +68,7 @@ header {
 .row-header {
   display: flex;
   height: 80px;
-  padding: 0 -15px;
   align-items: center;
-  /* justify-content: center; */
 }
 
 [class*="col-"] {
@@ -31,14 +77,17 @@ header {
 
 .col-3 {
   width: 25%;
+  /* flex-grow: 3; */
 }
 
 .col-7 {
   width: 58.33333%;
+  /* flex-grow: 7; */
 }
 
 .col-2 {
   width: 16.66667%;
+  /* flex-grow: 2; */
 }
 
 .logo {
@@ -48,12 +97,10 @@ header {
 .navigation ul {
   display: flex;
   padding: 0;
-  /* justify-content: space-around; */
+  margin: 0 auto;
 }
 
 .navigation li {
-  border-radius: 5px;
-  border-radius: 5px;
   margin: 0 5px;
   padding: 5px 10px;
   list-style: none;
@@ -63,7 +110,7 @@ header {
   font-size: 14px;
   font-weight: 400;
   border: 2px solid #1d2126;
-
+  border-radius: 5px;
 }
 
 .navigation a {
